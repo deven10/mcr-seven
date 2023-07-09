@@ -43,6 +43,9 @@ export const DetailedDestination = () => {
             <span>Reviews:</span> {destinationsSelected.reviews}
           </p>
           <p>
+            <span>Location:</span> {destinationsSelected.location}
+          </p>
+          <p>
             <span>Opening Hours:</span> {destinationsSelected.openingHours}
           </p>
           <p>
