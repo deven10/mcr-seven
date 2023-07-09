@@ -1,38 +1,105 @@
 .App {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  width: 100%;
+  background-color: #242424;
+}
+
+.homepage h1{ 
+  color: #fff;
+  text-align: center;
+}
+.homepage h3 {
+  color: #5f67f0;
   text-align: center;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.continents-wrapper{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 15px;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.continents{
+  width: 200px;
+  height: 200px;
+  border-radius: 10px;
+  border-bottom: 1px solid #ccc;
+  border-right: 1px solid #ccc;
+  position: relative;
+  cursor: pointer;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.continents img {
+  width: 100%;
+  height: 100%;
+  border-radius: 10px;
+}
+
+img.location{
+  height: 18px;
+  width: 18px;
+  background-color: transparent;
+}
+
+.continents p{
+  position: absolute;
+  bottom: 10px;
+  left: 10px;
+  font-size: 20px;
+  color: #fff;
+  font-weight: 600;
+  margin: 0;
+}
+
+.countries-page h2{
+  color: #fff;
+  text-align: center;
+}
+
+.details-page{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 50px;
+  gap: 30px;
+}
+
+
+.details-page img{
+  height: 500px;
+  width: 500px;
+  object-fit: cover;
+}
+
+.destination-details{
   display: flex;
   flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  justify-content: space-around;
+  align-items: start;
+  gap: 20px;
 }
 
-.App-link {
-  color: #61dafb;
+.destination-details p{
+  color: #fff;
+  margin: 0;
+  font-size: 18px;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.destination-details p span{
+  color: #5868ff;
+  margin-right: 5px;
+  font-size: 18px;
+  font-weight: 600;
+}
+
+.website {
+  color: #5868ff;
+  text-decoration: underline;
+  cursor: pointer;
+  font-size: 22px;
 }
