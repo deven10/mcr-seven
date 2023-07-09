@@ -5,7 +5,7 @@ import { data } from "../data/Data";
 export const DetailedDestination = () => {
   const { destinationName } = useParams();
 
-  let destinationsSelected = {};
+  let destinationSelected = {};
   for (let i = 0; i < data.continents.length; i++) {
     for (let j = 0; j < data.continents[i].countries.length; j++) {
       for (
@@ -17,7 +17,7 @@ export const DetailedDestination = () => {
           data.continents[i].countries[j].destinations[k].name ===
           destinationName
         ) {
-          destinationsSelected = {
+          destinationSelected = {
             ...data.continents[i].countries[j].destinations[k],
           };
         }
@@ -25,35 +25,33 @@ export const DetailedDestination = () => {
     }
   }
 
-  console.log("destinationsSelected: ", destinationsSelected);
-
   return (
     <div className="countries-page">
       <h1>{destinationName}</h1>
       <div className="details-page">
-        <img src={destinationsSelected.image} alt={destinationsSelected.name} />
+        <img src={destinationSelected.image} alt={destinationSelected.name} />
         <div className="destination-details">
           <p>
-            <span>Description:</span> {destinationsSelected.description}
+            <span>Description:</span> {destinationSelected.description}
           </p>
           <p>
-            <span>Ratings:</span> {destinationsSelected.ratings}
+            <span>Ratings:</span> {destinationSelected.ratings}
           </p>
           <p>
-            <span>Reviews:</span> {destinationsSelected.reviews}
+            <span>Reviews:</span> {destinationSelected.reviews}
           </p>
           <p>
-            <span>Location:</span> {destinationsSelected.location}
+            <span>Location:</span> {destinationSelected.location}
           </p>
           <p>
-            <span>Opening Hours:</span> {destinationsSelected.openingHours}
+            <span>Opening Hours:</span> {destinationSelected.openingHours}
           </p>
           <p>
-            <span>TIcket Price:</span> {destinationsSelected.ticketPrice}
+            <span>TIcket Price:</span> {destinationSelected.ticketPrice}
           </p>
           <Link
             className="website"
-            href={destinationsSelected.website}
+            href={destinationSelected.website}
             target="_blank"
           >
             Website
