@@ -51,7 +51,7 @@ export const DetailedDestination = () => {
           </p>
           <Link
             className="website"
-            href={destinationSelected.website}
+            to={destinationSelected.website}
             target="_blank"
           >
             Website
