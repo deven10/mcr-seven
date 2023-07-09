@@ -56,7 +56,7 @@ img.location{
   margin: 0;
 }
 
-.countries-page h2{
+.countries-page h2, .countries-page h1{
   color: #fff;
   text-align: center;
 }

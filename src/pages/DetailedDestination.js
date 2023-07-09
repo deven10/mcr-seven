@@ -29,7 +29,7 @@ export const DetailedDestination = () => {
 
   return (
     <div className="countries-page">
-      <h2>{destinationName}</h2>
+      <h1>{destinationName}</h1>
       <div className="details-page">
         <img src={destinationsSelected.image} alt={destinationsSelected.name} />
         <div className="destination-details">
